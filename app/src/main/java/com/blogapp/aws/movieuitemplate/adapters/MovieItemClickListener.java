@@ -1,6 +1,8 @@
-package com.blogapp.aws.movieuitemplate;
+package com.blogapp.aws.movieuitemplate.adapters;
 
 import android.widget.ImageView;
+
+import com.blogapp.aws.movieuitemplate.models.Movie;
 
 public interface MovieItemClickListener {
 

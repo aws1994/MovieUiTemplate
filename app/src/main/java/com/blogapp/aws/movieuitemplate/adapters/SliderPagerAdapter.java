@@ -1,4 +1,4 @@
-package com.blogapp.aws.movieuitemplate;
+package com.blogapp.aws.movieuitemplate.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.blogapp.aws.movieuitemplate.R;
+import com.blogapp.aws.movieuitemplate.models.Slide;
 
 import java.util.List;
 

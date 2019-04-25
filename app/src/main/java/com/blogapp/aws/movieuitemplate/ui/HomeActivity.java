@@ -1,4 +1,4 @@
-package com.blogapp.aws.movieuitemplate;
+package com.blogapp.aws.movieuitemplate.ui;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -10,6 +10,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.blogapp.aws.movieuitemplate.models.Movie;
+import com.blogapp.aws.movieuitemplate.adapters.MovieAdapter;
+import com.blogapp.aws.movieuitemplate.adapters.MovieItemClickListener;
+import com.blogapp.aws.movieuitemplate.R;
+import com.blogapp.aws.movieuitemplate.models.Slide;
+import com.blogapp.aws.movieuitemplate.adapters.SliderPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,8 +56,8 @@ public class HomeActivity extends AppCompatActivity implements MovieItemClickLis
         // ini data
 
         List<Movie> lstMovies = new ArrayList<>();
-        lstMovies.add(new Movie("Moana",R.drawable.moana));
-        lstMovies.add(new Movie("Black P",R.drawable.blackp));
+        lstMovies.add(new Movie("Moana",R.drawable.moana,R.drawable.spidercover));
+        lstMovies.add(new Movie("Black P",R.drawable.blackp,R.drawable.spidercover));
         lstMovies.add(new Movie("The Martian",R.drawable.themartian));
         lstMovies.add(new Movie("The Martian",R.drawable.themartian));
         lstMovies.add(new Movie("The Martian",R.drawable.themartian));
@@ -75,6 +82,7 @@ public class HomeActivity extends AppCompatActivity implements MovieItemClickLis
         // send movie information to deatilActivity
         intent.putExtra("title",movie.getTitle());
         intent.putExtra("imgURL",movie.getThumbnail());
+        intent.putExtra("imgCover",movie.getCoverPhoto());
         // lets crezte the animation
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this,
                                                     movieImageView,"sharedName");

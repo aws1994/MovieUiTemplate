@@ -1,4 +1,4 @@
-package com.blogapp.aws.movieuitemplate;
+package com.blogapp.aws.movieuitemplate.models;
 
 public class Slide {
 
